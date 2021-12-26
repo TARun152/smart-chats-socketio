@@ -1,5 +1,9 @@
 const PORT=process.env.PORT||8800
-const io=require('socket.io')(PORT);
+const io=require('socket.io')(PORT,{
+    cors:{
+        origin:"https://smart-chat15.herokuapp.com"
+    }
+});
 let users=[]
 const addUser=(socketId,userId)=>{
     // checking if user already exist or not
