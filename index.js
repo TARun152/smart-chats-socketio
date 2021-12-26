@@ -1,7 +1,7 @@
 const PORT=process.env.PORT||8800
 const io=require('socket.io')(PORT,{
     cors:{
-        origin:"https://smart-chat15.herokuapp.com"
+        origin:"*"
     }
 });
 let users=[]
